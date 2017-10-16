@@ -1,0 +1,39 @@
+*~
+._*
+.DS_Store
+.idea
+node_modules
+bower_components
+npm-debug.log
+####################################################
+# Global .gitignore Flle
+# Reference:  http://help.github.com/ignore-files/
+# Save this in a file: ~/.gitignore_global
+# Then at the command line (you will see more info if a repo is in the current folder):
+# git config --global core.excludesfile ~/.gitignore_global
+# git config --list
+#####################
+
+# Maven #
+#########
+target/
+
+# Eclipse #  
+###########
+*.classpath
+.settings/
+
+
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
