@@ -64,4 +64,12 @@ alias killos="killfinder && killdock && killmenubar"
 
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
+#Update Brew, Upgrade Brew; npm install npm, npm update; gem update system, gem #update; system update
 alias updateall="bash ~/.dotfiles/updateall.sh"
+
+#reboot with and without a prompt
+alias rbprompt="osascript -e 'tell app "loginwindow" to «event aevtrrst»'"
+#alias rbnoprompt="osascript -e 'tell app "System Events" to restart'"
+
+
+

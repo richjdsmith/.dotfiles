@@ -66,6 +66,31 @@ for METHOD in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 unset METHOD
 
+### SERVER SERVICES ALIAS
+# Nginx
+alias nginx.start='sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.stop='sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist'
+alias nginx.restart='nginx.stop && nginx.start'
+
+# PHP-FPM
+alias php-fpm.start="brew services start php71"
+alias php-fpm.stop="brew services stop php71"
+alias php-fpm.restart="brew services restart php71"
+
+
+# MySQL
+alias mysql.start="brew services start mariadb"
+alias mysql.stop="brew services stop mariadb"
+alias mysql.stop="brew services restart mariadb"
+
+
+# Nginx Logs
+alias nginx.logs.error='tail -250f /usr/local/etc/nginx/logs/error.log'
+alias nginx.logs.access='tail -250f /usr/local/etc/nginx/logs/access.log'
+alias nginx.logs.default.access='tail -250f /usr/local/etc/nginx/logs/default.access.log'
+alias nginx.logs.default-ssl.access='tail -250f /usr/local/etc/nginx/logs/default-ssl.access.log'
+alias nginx.logs.phpmyadmin.access='tail -250f /usr/local/etc/nginx/logs/phpmyadmin.access.log'
+
 # Miscellaneous
 
 alias his="historie"
